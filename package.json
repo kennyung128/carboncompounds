@@ -1,0 +1,13 @@
+{
+  "name": "carbon-compounds-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Carbon Compounds research catalog - static site for Cloudflare Pages",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npx --yes serve public -l 8788",
+    "preview": "npm run build && npx --yes wrangler pages dev dist",
+    "deploy": "npm run build && npx --yes wrangler pages deploy dist --project-name carbon-compounds"
+  },
+  "engines": { "node": ">=18" }
+}
